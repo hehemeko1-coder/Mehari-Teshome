@@ -1,0 +1,74 @@
+:root{
+  --ink:#191512; --paper:#eee6d7; --paper-2:#e2d5c0; --cream:#f6f0e5;
+  --rust:#925a3d; --brown:#4a3427; --line:rgba(25,21,18,.25); --muted:#71665b;
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;font-size:18px;line-height:1.45}
+a{color:inherit;text-decoration:none} button,input{font:inherit} img{display:block;max-width:100%}
+.site-header{position:sticky;top:0;z-index:30;min-height:72px;padding:14px 4vw;display:flex;align-items:center;justify-content:space-between;gap:24px;background:rgba(238,230,215,.97);border-bottom:1px solid var(--line)}
+.brand{display:grid;gap:2px}.brand span,.nav a,.menu-button,.close-menu,.eyebrow,.mini-number,.count,.source-note,.art-label,.dialog-note,.footer,.exhibition-row strong{font-family:"DM Mono",monospace}
+.brand span{font-size:12px;letter-spacing:.13em}.brand small{font:9px "DM Mono",monospace;color:var(--muted);letter-spacing:.12em}
+.nav{display:flex;gap:25px}.nav a,.menu-button,.close-menu{font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.nav a:hover,.links a:hover,.email:hover{color:var(--rust)}.menu-button{display:none;background:none;border:0;cursor:pointer}
+.mobile-menu{display:none;position:fixed;inset:0;z-index:50;background:var(--ink);color:var(--paper);padding:28px}
+.mobile-menu.open{display:flex;flex-direction:column;gap:18px}.mobile-menu a{font-size:32px;line-height:1.1}
+.close-menu{align-self:flex-end;background:none;border:0;color:inherit;cursor:pointer}
+.section-pad{padding:110px 4vw}
+.hero{max-width:var(--max);margin:0 auto;min-height:calc(100vh - 72px);display:grid;grid-template-columns:70px minmax(250px,.72fr) minmax(420px,1.28fr);gap:34px;align-items:center}
+.hero-mark,.section-index,.culture-numeral{font-family:"Noto Sans Ethiopic",sans-serif;color:var(--rust);font-size:25px}
+.eyebrow{margin:0 0 14px;color:var(--muted);font-size:10px;letter-spacing:.13em}
+.hero h1{margin:0;font-size:clamp(44px,6vw,70px);line-height:.9;font-weight:500;letter-spacing:-.025em}
+.hero-intro{max-width:430px;margin:24px 0 0;font-size:20px}.hero-art{align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+.hero-art img{width:100%;max-height:72vh;object-fit:contain;background:var(--cream)}
+.art-label{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:8px 0;font-size:9px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.biography,.practice,.works,.exhibitions,.contact,.testimonial{max-width:var(--max);margin:0 auto}.biography{background:var(--cream)}
+.section-heading h2{margin:0;max-width:680px;font-size:clamp(31px,4vw,48px);line-height:1.02;font-weight:500}
+.bio-grid{margin-top:55px;display:grid;grid-template-columns:1.25fr .75fr;gap:90px}.bio-lead{font-size:23px;max-width:760px}.bio-lead p{margin:0 0 22px}
+.bio-side{border-top:1px solid var(--line);padding-top:18px;align-self:start}.quote-mark{font-size:60px;line-height:.6;color:var(--rust)}
+.bio-side p{font-size:24px;margin:16px 0}.source-note{font-size:9px;color:var(--muted);letter-spacing:.04em}
+.culture-strip{min-height:125px;padding:22px 4vw;display:grid;grid-template-columns:70px 1fr auto 1fr auto;align-items:center;gap:28px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.045) 0 2px,transparent 2px 13px),var(--brown);color:var(--cream);border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(0,0,0,.25)}
+.culture-word{font-family:"Noto Sans Ethiopic",sans-serif;font-size:27px}.culture-copy{font:9px "DM Mono",monospace;letter-spacing:.1em}.culture-rule{height:1px;background:rgba(238,230,215,.45)}
+.practice-grid{margin-top:58px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.practice-grid article{min-height:280px;padding:24px 25px 20px 0;margin-right:25px;border-right:1px solid var(--line)}
+.practice-grid article:last-child{border-right:0}.mini-number{font-size:9px;color:var(--rust)}.practice-grid h3{margin:30px 0 12px;font-size:24px;font-weight:500}.practice-grid p{margin:0;font-size:16px;color:#51483f}
+.statement{margin-top:90px;padding:42px 0 0;border-top:1px solid var(--line);max-width:900px}.statement blockquote{margin:0 0 22px;font-size:34px;line-height:1.08;font-weight:500}.statement p:last-child{max-width:700px}
+.works{background:var(--paper)}.works-top{display:grid;grid-template-columns:1fr 360px;gap:50px;align-items:end}.works-note{margin:0;color:var(--muted);font-size:16px}
+.controls{margin:48px 0 28px;padding:15px 0;display:grid;grid-template-columns:270px 1fr auto;gap:25px;align-items:end;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.search{display:grid;gap:6px}.search span{font:9px "DM Mono",monospace;text-transform:uppercase;color:var(--muted);letter-spacing:.1em}
+.search input{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;padding:8px 0;outline:none;color:var(--ink)}
+.year-filters{display:flex;flex-wrap:wrap;gap:7px}.year-button{border:1px solid var(--line);background:transparent;color:var(--ink);padding:7px 10px;cursor:pointer;font:9px "DM Mono",monospace}
+.year-button.active,.year-button:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}.count{font-size:9px;color:var(--muted);white-space:nowrap}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.art-card{grid-column:span 4;cursor:pointer;min-width:0}
+.art-card:nth-child(5n+1){grid-column:span 7}.art-card:nth-child(5n+2){grid-column:span 5}.art-card:nth-child(5n+3),.art-card:nth-child(5n+4),.art-card:nth-child(5n){grid-column:span 4}
+.art-image-wrap{background:var(--cream);border:1px solid rgba(25,21,18,.12);min-height:250px;display:flex;align-items:center;justify-content:center}
+.art-card img{width:100%;height:100%;aspect-ratio:1.15/1;object-fit:contain}.art-info{display:grid;grid-template-columns:1fr auto;gap:12px;padding:10px 0 18px;border-bottom:1px solid var(--line)}
+.art-title{font-size:20px;line-height:1.05}.art-meta{font:9px/1.5 "DM Mono",monospace;color:var(--muted);text-align:right;white-space:nowrap}.no-results{padding:50px 0;color:var(--muted)}
+.exhibitions{background:var(--cream)}.exhibition-list{margin-top:55px;border-top:1px solid var(--line)}
+.exhibition-row{display:grid;grid-template-columns:100px 1fr;gap:30px;padding:13px 0;border-bottom:1px solid var(--line);font-size:17px}.exhibition-row strong{font-size:10px;color:var(--rust);font-weight:400;letter-spacing:.08em}
+.testimonial{background:var(--paper-2)}.testimonial-inner{max-width:850px;margin-left:100px}.testimonial blockquote{margin:0 0 22px;font-size:36px;line-height:1.08}.testimonial-by{font:9px/1.6 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.contact{background:var(--ink);color:var(--paper);display:grid;grid-template-columns:70px 1fr}.contact .section-index{color:#c18a58}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.contact h2{font-size:44px;font-weight:500;margin:0 0 10px}.contact p{margin:0 0 8px;color:#c5b8a5}
+.email{display:inline-block;margin-top:16px;color:var(--paper);border-bottom:1px solid rgba(238,230,215,.35)}.links{display:grid;align-content:end;gap:10px;font:10px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.07em}.links span{color:#877b6d}
+.footer{display:flex;justify-content:space-between;padding:17px 4vw;background:#0f0d0b;color:#877b6d;font-size:9px;letter-spacing:.08em}
+.art-dialog{width:100%;height:100%;max-width:none;max-height:none;border:0;padding:0;background:rgba(20,17,14,.98);color:var(--paper)}.art-dialog::backdrop{background:rgba(20,17,14,.86)}
+.dialog-shell{min-height:100%;display:grid;grid-template-columns:70px minmax(0,1fr) 330px;grid-template-rows:70px 1fr;gap:0;padding:0 3vw}
+.dialog-close{grid-column:1/4;justify-self:end;align-self:center;background:none;border:0;color:var(--paper);cursor:pointer;font:10px "DM Mono",monospace;text-transform:uppercase}
+.dialog-figure{grid-column:2;grid-row:2;margin:0;min-height:0;display:flex;align-items:center;justify-content:center}.dialog-figure img{max-width:100%;max-height:82vh;object-fit:contain}
+.dialog-prev,.dialog-next{align-self:center;justify-self:center;width:44px;height:44px;border:1px solid rgba(238,230,215,.3);border-radius:50%;background:transparent;color:var(--paper);cursor:pointer;font-size:22px}
+.dialog-prev{grid-column:1;grid-row:2}.dialog-next{grid-column:3;grid-row:2}.dialog-info{grid-column:3;grid-row:2;align-self:end;padding:0 25px 8vh 35px}
+.dialog-info h2{font-size:35px;font-weight:500;line-height:1.05;margin:0 0 12px}.dialog-info p{margin:0}.dialog-note{margin-top:28px!important;color:#938778;font-size:9px;line-height:1.7}
+@media (max-width:900px){
+  .nav{display:none}.menu-button{display:block}.section-pad{padding:80px 6vw}
+  .hero{min-height:auto;grid-template-columns:35px 1fr;gap:20px;padding-top:70px}.hero-art{grid-column:2}.hero h1{font-size:52px}.hero-intro{font-size:18px}
+  .bio-grid,.works-top,.contact-grid{grid-template-columns:1fr;gap:35px}.practice-grid{grid-template-columns:1fr 1fr}.practice-grid article:nth-child(2){border-right:0}
+  .culture-strip{grid-template-columns:35px 1fr;gap:12px}.culture-rule{display:none}.culture-copy{grid-column:2}
+  .controls{grid-template-columns:1fr}.count{justify-self:start}.gallery{grid-template-columns:1fr 1fr}.art-card,.art-card:nth-child(n){grid-column:span 1}.art-card:nth-child(5n+1){grid-column:span 2}
+  .testimonial-inner{margin-left:0}.contact{grid-template-columns:35px 1fr}
+  .dialog-shell{grid-template-columns:50px minmax(0,1fr) 50px;grid-template-rows:60px 1fr auto}.dialog-close{grid-column:1/4}.dialog-figure{grid-column:2;grid-row:2}.dialog-prev{grid-column:1;grid-row:2}.dialog-next{grid-column:3;grid-row:2}.dialog-info{grid-column:1/4;grid-row:3;padding:25px 15px 35px}
+}
+@media (max-width:560px){
+  body{font-size:17px}.site-header{padding:13px 5vw}.hero{grid-template-columns:25px 1fr;gap:14px}.hero h1{font-size:43px}.hero-intro{font-size:17px}
+  .practice-grid{grid-template-columns:1fr}.practice-grid article{border-right:0!important;border-bottom:1px solid var(--line);margin-right:0}.practice-grid article:last-child{border-bottom:0}
+  .gallery{grid-template-columns:1fr}.art-card:nth-child(n),.art-card:nth-child(5n+1){grid-column:span 1}.testimonial blockquote{font-size:29px}.contact h2{font-size:36px}.footer{gap:15px;flex-direction:column}
+}
